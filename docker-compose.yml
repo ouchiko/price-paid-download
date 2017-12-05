@@ -1,0 +1,9 @@
+version: '2'
+services:
+    getdata:
+        restart: 'no'
+        build: ./getdata
+        container_name: getdata
+        volumes:
+            - ./data:/data
+        command: /runner/data-obtain.sh
